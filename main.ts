@@ -38,7 +38,6 @@ let wooweeewooweee = 0
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
 bitbot.select_model(BBModel.XL)
-bitbot.go(BBDirection.Forward, 60)
 let weeewooweeewoo = 40
 loops.everyInterval(500, function () {
     if (true) {
