@@ -10,20 +10,35 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 input.onButtonPressed(Button.A, function () {
-    radio.sendNumber(1)
+    if (input.buttonIsPressed(Button.A) && modus == 0) {
+        radio.sendNumber(1)
+        modus = 1
+    }
 })
 input.onButtonPressed(Button.AB, function () {
-    radio.sendNumber(0)
+    if (input.buttonIsPressed(Button.A) && modus == 0) {
+        radio.sendNumber(0)
+    }
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendNumber(2)
+    if (input.buttonIsPressed(Button.A) && modus == 0) {
+        radio.sendNumber(2)
+        telle_opp = 0
+    }
 })
+let telle_opp = 0
+let modus = 0
 let wooweeewooweee = 0
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
 bitbot.select_model(BBModel.XL)
 bitbot.go(BBDirection.Forward, 60)
 let weeewooweeewoo = 40
+loops.everyInterval(500, function () {
+    if (true) {
+    	
+    }
+})
 basic.forever(function () {
     if (wooweeewooweee == 0) {
         if (bitbot.readLight(BBLightSensor.Left) + bitbot.readLight(BBLightSensor.Right) > weeewooweeewoo) {
