@@ -22,23 +22,23 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.AB, function () {
-    if (input.buttonIsPressed(Button.A) && modus == 0) {
+    if (input.buttonIsPressed(Button.AB) && modus == 0) {
         radio.sendNumber(0)
     }
 })
 input.onButtonPressed(Button.B, function () {
-    if (input.buttonIsPressed(Button.A) && modus == 0) {
+    if (input.buttonIsPressed(Button.B) && modus == 0) {
         radio.sendNumber(2)
-        telle_opp = 0
     }
 })
-let telle_opp = 0
 let modus = 0
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
 bitbot.select_model(BBModel.XL)
 loops.everyInterval(500, function () {
-    if (true) {
-    	
+    while (true) {
+        if (0 > 0) {
+        	
+        }
     }
 })
