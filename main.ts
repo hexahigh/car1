@@ -13,9 +13,9 @@ input.onButtonPressed(Button.A, function () {
     radio.sendNumber(1)
     basic.showLeds(`
         . . # . .
-        . # # # .
+        . # # . .
         # # # # #
-        . . # . .
+        . # # . .
         . . # . .
         `)
     basic.pause(100)
@@ -25,9 +25,9 @@ input.onButtonPressed(Button.AB, function () {
     radio.sendNumber(0)
     basic.showLeds(`
         . . # . .
-        . # # . .
+        . # # # .
         # # # # #
-        . # # . .
+        . . # . .
         . . # . .
         `)
     basic.pause(100)
