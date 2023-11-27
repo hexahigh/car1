@@ -4,6 +4,9 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
     if (receivedNumber == 1) {
         bitbot.rotatems(BBRobotDirection.Left, 60, 500)
+        for (let index = 0; index <= 5; index++) {
+            bitbot.setPixelColor(index + 6, 0xFF0000)
+        }
     }
     if (receivedNumber == 2) {
         bitbot.rotatems(BBRobotDirection.Right, 60, 500)
