@@ -13,25 +13,14 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 input.onButtonPressed(Button.A, function () {
-    if (input.buttonIsPressed(Button.A) && modus == 0) {
-        radio.sendNumber(1)
-        modus = 1
-    }
-    if (input.buttonIsPressed(Button.A) && modus == 1) {
-        radio.sendNumber(3)
-    }
+    radio.sendNumber(1)
 })
 input.onButtonPressed(Button.AB, function () {
-    if (input.buttonIsPressed(Button.AB) && modus == 0) {
-        radio.sendNumber(0)
-    }
+    radio.sendNumber(0)
 })
 input.onButtonPressed(Button.B, function () {
-    if (input.buttonIsPressed(Button.B) && modus == 0) {
-        radio.sendNumber(2)
-    }
+    radio.sendNumber(2)
 })
-let modus = 0
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
 bitbot.select_model(BBModel.XL)
