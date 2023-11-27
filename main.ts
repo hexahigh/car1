@@ -6,10 +6,17 @@ radio.onReceivedNumber(function (receivedNumber) {
         bitbot.rotatems(BBRobotDirection.Left, 60, 500)
         for (let index = 0; index <= 5; index++) {
             bitbot.setPixelColor(index + 6, 0xFF0000)
+            basic.pause(50)
+            bitbot.ledClear()
         }
     }
     if (receivedNumber == 2) {
         bitbot.rotatems(BBRobotDirection.Right, 60, 500)
+        for (let index = 0; index <= 5; index++) {
+            bitbot.setPixelColor(index, 0xFF0000)
+            basic.pause(50)
+            bitbot.ledClear()
+        }
     }
 })
 input.onButtonPressed(Button.A, function () {
