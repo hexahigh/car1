@@ -5,7 +5,9 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "BitBot": "github:4tronix/bitbot#v1.5.12"
+        "BitBot": "github:4tronix/bitbot#v1.5.12",
+        "radio-broadcast": "*",
+        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.5"
     },
     "files": [
         "main.blocks",
