@@ -3,30 +3,41 @@ radio.onReceivedNumber(function (receivedNumber) {
         bitbot.goms(BBDirection.Forward, 60, 500)
     }
     if (receivedNumber == 1) {
-        bitbot.rotatems(BBRobotDirection.Left, 60, 500)
-        for (let index = 0; index <= 5; index++) {
-            bitbot.setPixelColor(index + 6, 0xFF0000)
-            basic.pause(50)
-            bitbot.ledClear()
-        }
+        bitbot.rotatems(BBRobotDirection.Left, 60, 100)
     }
     if (receivedNumber == 2) {
-        bitbot.rotatems(BBRobotDirection.Right, 60, 500)
-        for (let index = 0; index <= 5; index++) {
-            bitbot.setPixelColor(index, 0xFF0000)
-            basic.pause(50)
-            bitbot.ledClear()
-        }
+        bitbot.rotatems(BBRobotDirection.Right, 60, 100)
     }
 })
 input.onButtonPressed(Button.A, function () {
     radio.sendNumber(1)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . . # . .
+        . . # . .
+        `)
 })
 input.onButtonPressed(Button.AB, function () {
     radio.sendNumber(0)
+    basic.showLeds(`
+        . . # . .
+        . # # . .
+        # # # # #
+        . # # . .
+        . . # . .
+        `)
 })
 input.onButtonPressed(Button.B, function () {
     radio.sendNumber(2)
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        # # # # #
+        . . # # .
+        . . # . .
+        `)
 })
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
