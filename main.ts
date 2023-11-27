@@ -18,6 +18,8 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         . . # . .
         `)
+    basic.pause(100)
+    basic.clearScreen()
 })
 input.onButtonPressed(Button.AB, function () {
     radio.sendNumber(0)
@@ -28,6 +30,8 @@ input.onButtonPressed(Button.AB, function () {
         . # # . .
         . . # . .
         `)
+    basic.pause(100)
+    basic.clearScreen()
 })
 input.onButtonPressed(Button.B, function () {
     radio.sendNumber(2)
@@ -38,6 +42,8 @@ input.onButtonPressed(Button.B, function () {
         . . # # .
         . . # . .
         `)
+    basic.pause(100)
+    basic.clearScreen()
 })
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
