@@ -8,9 +8,6 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 2) {
         bitbot.rotatems(BBRobotDirection.Right, 60, 500)
     }
-    if (receivedNumber == 3) {
-        bitbot.goms(BBDirection.Forward, 60, 250)
-    }
 })
 input.onButtonPressed(Button.A, function () {
     radio.sendNumber(1)
@@ -24,10 +21,3 @@ input.onButtonPressed(Button.B, function () {
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
 bitbot.select_model(BBModel.XL)
-loops.everyInterval(500, function () {
-    while (true) {
-        if (0 > 0) {
-        	
-        }
-    }
-})
