@@ -1,4 +1,5 @@
 radio.onReceivedNumber(function (receivedNumber) {
+    isCar = 1
     if (receivedNumber == 0) {
         bitbot.goms(BBDirection.Forward, 60, 500)
     }
@@ -45,6 +46,13 @@ input.onButtonPressed(Button.B, function () {
     basic.pause(100)
     basic.clearScreen()
 })
+let isCar = 0
+isCar = 0
 bitbot.bbEnableBluetooth(BBBluetooth.btEnable)
 radio.setGroup(101)
 bitbot.select_model(BBModel.XL)
+basic.forever(function () {
+    if (isCar == 1) {
+        led.toggle(randint(0, 4), randint(0, 4))
+    }
+})
